@@ -5,21 +5,34 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+       <p>The react killer</p>
+       <Person name='James' profession='React killer'></Person>
+       <Person name ='Masum' profession ='Software Engineer'></Person>
+       <JobPlace job ="Software developer" place ='Dhaka'></JobPlace>
       </header>
     </div>
   );
 }
+const styleCss = {
+  border: '2px solid red',
+  width:'300px',
+  margin:'10px'
+}
+function Person(props){
+  return(
+    <div style={styleCss}>
+      <h3>Name:{props.name}</h3>
+      <p>Profession: {props.profession}</p>
+    </div>
+  )
+}
 
+function JobPlace(props){
+  return(
+    <div style={styleCss}>
+      <h3>Job:{props.job}</h3>
+      <h4>Place:{props.place}</h4>
+    </div>
+  )
+}
 export default App;
